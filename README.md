@@ -57,7 +57,7 @@ python chunk_gradient.py \
   --device_map auto
 ```
 
-Parts of the gradient extraction and chunking code are **adapted from [SqueezeLLM: Dense-and-Sparse Quantization](https://arxiv.org/abs/2306.07629)**.
+Parts of the gradient extraction and chunking code are adapted from [SqueezeLLM: Dense-and-Sparse Quantization (ICML 2024)](https://arxiv.org/abs/2306.07629).
 
 ## 3. ToM + Perplexity Evaluation
 
