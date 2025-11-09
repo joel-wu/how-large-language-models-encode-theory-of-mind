@@ -5,16 +5,12 @@
 
 This repository contains the official code for the NPJ AI paper **“How Large Language Models Encode Theory-of-Mind: A Study on Sparse Parameter Patterns.”**
 
----
-
 1. `create_gradient.py` → compute squared gradients and save as model
 2. `chunk_gradient.py` → split gradient into per-layer chunks
 3. `ToM_and_perplexity_evaluation.py` → build masked models for each `m`, run ToM & perplexity eval
 4. `summarize.py` → aggregate ToM results
 
 Replace every `[]` with your own paths.
-
----
 
 ## 1. Create Gradients
 
@@ -43,8 +39,6 @@ python create_gradient.py \
   --out [OUT_DIR_FOR_C4_GRAD]
 ```
 
----
-
 ## 2. Chunk Gradients
 
 ```bash
@@ -63,7 +57,7 @@ python chunk_gradient.py \
   --device_map auto
 ```
 
----
+Parts of the gradient extraction and chunking code are **adapted from [SqueezeLLM: Dense-and-Sparse Quantization](https://arxiv.org/abs/2306.07629)**.
 
 ## 3. ToM + Perplexity Evaluation
 
@@ -82,8 +76,6 @@ python ToM_and_perplexity_evaluation.py \
   --m_start 0.0 --m_end 5e-5 --m_step 2e-6
 ```
 
----
-
 ## 4. Summarize ToM Scores
 
 ```bash
@@ -92,3 +84,22 @@ python summarize.py \
   --reps 5 \
   --out_csv [EVAL_OUT_DIR]/tom_summary.csv
 ```
+
+## Citation
+
+If you find this work useful, please cite our paper:
+
+```bibtex
+@article{wu2025large,
+  title={How large language models encode theory-of-mind: a study on sparse parameter patterns},
+  author={Wu, Yuheng and Guo, Wentao and Liu, Zirui and Ji, Heng and Xu, Zhaozhuo and Zhang, Denghui},
+  journal={npj Artificial Intelligence},
+  volume={1},
+  number={1},
+  pages={20},
+  year={2025},
+  publisher={Nature Publishing Group UK London}
+}
+```
+
+For questions or issues, please contact [Yuheng Wu](mailto:yuhengwu@stanford.edu) or open an issue in this repository.
