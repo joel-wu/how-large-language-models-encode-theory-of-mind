@@ -1,4 +1,9 @@
-# how-large-language-models-encode-theory-of-mind
+# How Large Language Models Encode Theory-of-Mind: A Study on Sparse Parameter Patterns
+
+[![NPJAI 2025](https://img.shields.io/badge/NPJAI-2025-green)](https://www.nature.com/articles/s44387-025-00031-9)
+[![arXiv](https://img.shields.io/badge/arXiv-2504.04238-red)](https://arxiv.org/abs/2504.04238)
+
+This repository contains the official code for the NPJ AI paper **“How Large Language Models Encode Theory-of-Mind: A Study on Sparse Parameter Patterns.”**
 
 ---
 
